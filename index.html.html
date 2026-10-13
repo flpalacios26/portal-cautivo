@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Cautivo - Clúster Edge Computing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Portal Cautivo</h1>
+            <p>Clúster de Edge Computing - Inferencia de IA Local</p>
+        </div>
+
+        <div id="step-registro" class="step active">
+            <h2>Paso 1: Registro</h2>
+            <form id="form-registro">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="text" id="telefono" placeholder="Teléfono" required>
+                <button type="submit">Continuar al pago</button>
+            </form>
+        </div>
+
+        <div id="step-pago" class="step">
+            <h2>Paso 2: Pago</h2>
+            <div class="resumen">
+                <p><strong>Plan:</strong> Acceso al clúster de IA</p>
+                <p><strong>Duración:</strong> 24 horas</p>
+                <p><strong>Precio:</strong> Q50.00</p>
+            </div>
+            <form id="form-pago">
+                <input type="text" id="tarjeta" placeholder="Número de tarjeta (16 dígitos)" maxlength="16" required>
+                <input type="text" id="expiracion" placeholder="MM/AA" maxlength="5" required>
+                <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+                <button type="submit">Pagar Q50.00</button>
+            </form>
+        </div>
+
+        <div id="step-liberacion" class="step">
+            <h2>✅ Acceso Liberado</h2>
+            <p>Tu acceso al clúster de IA ha sido activado.</p>
+            <div class="info">
+                <p><strong>IP asignada:</strong> <span id="ip-asignada">--</span></p>
+                <p><strong>Válido hasta:</strong> <span id="valido-hasta">--</span></p>
+            </div>
+            <button id="btn-acceder">Acceder al clúster</button>
+        </div>
+
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
